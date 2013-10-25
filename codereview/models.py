@@ -169,7 +169,7 @@ class Issue(db.Model):
     for line in description.splitlines():
       m = re.match(
         r'\s*COLLABORATOR\s*='
-        r'\s*([a-zA-Z0-9._]+@[a-zA-Z0-9_]+\.[a-zA-Z0-9._]+)\s*',
+        r'\s*([a-zA-Z0-9._-]+@[a-zA-Z0-9_-]+\.[a-zA-Z0-9._]+)\s*',
         line)
       if m:
         collaborators.append(m.group(1))
